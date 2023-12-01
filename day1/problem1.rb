@@ -85,4 +85,4 @@ def somme_part2(file)
   somme
 end 
 
-puts somme_part2("calibration_document") #53998
+puts somme_part2("calibration_document") #54019
