@@ -1,4 +1,4 @@
-input_doc = File.readlines("input_example").map(&:chomp)
+input_doc = File.readlines("input").map(&:chomp)
 
 def process_input(input_doc)
   convention = { 'red' => 0, 'green' => 1, 'blue' => 2 }
@@ -32,7 +32,6 @@ hash_games.each do |game_indice,draws|
   possible_game = []
   draws.each do |draw|
     possible_draw = draw.zip(reference).map { |combined| combined[0] <= combined[1]}
-    pp draw, reference, possible_draw 
     possible_game.concat(possible_draw)
   end 
   if possible_game.all?
